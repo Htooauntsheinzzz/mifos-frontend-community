@@ -287,6 +287,9 @@
             .when('/offices', {
                 templateUrl: 'views/organization/offices.html'
             })
+            .when('/manageofficeaddresses',{
+                templateUrl: 'views/organization/officeaddress.html'
+            })
             .when('/createoffice', {
                 templateUrl: 'views/organization/createoffice.html'
             })
