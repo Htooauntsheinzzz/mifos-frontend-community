@@ -4290,6 +4290,8 @@
 
   "Htoo aunt Shein customize": "Start",
   "label.button.manageOfficeAddress":"Manage Address",
+  "label.anchor.manageOfficeAddress": "Manage Address",
+  "label.anchor.allofficeAddress" :"Office Address" ,  
   "label.anchor.manageOfficecountry":"Manage Country",
   "label.addnewOfficeCountry":"Add or edit office country location",
   "label.anchor.manageOfficecity": "Manage City",
@@ -4297,5 +4299,9 @@
   "label.anchor.manageOfficeRegion":"Manage Region",
   "label.defineaddOfficeRegion":"Add or edit office region location",
   "label.anchor.manageofficeDistrict": "Manage District",
-  "label.defineAddOfficeDistrict": "Add or edit office district place"
+  "label.defineAddOfficeDistrict": "Add or edit office district place",
+  "label.button.createnewCountry": "Create New Country",
+  "label.heading.createnewCountry": "Create New Office Country Location",
+  "label.input.officecountryname":"Country Name"
+  
 }

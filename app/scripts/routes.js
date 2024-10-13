@@ -290,6 +290,13 @@
             .when('/manageofficeaddresses',{
                 templateUrl: 'views/organization/officeaddress.html'
             })
+            .when('/officecountry',{
+                templateUrl : 'views/organization/manageaddress/officecountry.html'         
+            })
+            .when('/createnewofficecountry',{
+                templateUrl : '/views/organization/manageaddress/createnewcountry.html'
+            }
+            )
             .when('/createoffice', {
                 templateUrl: 'views/organization/createoffice.html'
             })

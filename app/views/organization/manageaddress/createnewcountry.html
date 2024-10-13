@@ -1,0 +1,45 @@
+<form class="content-container" name="editcodeform" novalidate="">
+    <ul class="breadcrumb">
+        <li><a href="#/manageofficeaddresses">{{'label.anchor.allofficeAddress' | translate}}</a></li>
+        <li><a href="#/officecountry">{{'label.anchor.manageOfficecountry' | translate}}</a></li>
+    </ul>
+    <api-validate></api-validate>
+    <div class="card">
+        <div class="content">
+            <div class="toolbar">
+                <h4>{{'label.heading.createnewCountry' | translate}}</h4>
+            </div>
+            <br />
+            <form>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <input name="countryName" placeholder="{{ 'label.input.officecountryname' | translate }}"
+                            type="text" class="form-control" />
+                    </div>
+                    <div class="col-sm-3">
+                        <textarea name="description" 
+                            placeholder="{{ 'label.input.description' | translate }}" type="text"
+                            class="form-control">
+                    </div>
+                    <div class="col-sm-3">
+                        <input name="position"  placeholder="{{ 'label.input.position' | translate }}"
+                               type="text" class="form-control"/>
+                    </div>
+                    <div class="col-sm-3">
+                        <label class="control-label col-sm-2">{{'label.input.active' | translate}}</label>
+                        <div class="col-sm-3">
+                            <input id="activeCheckbox" type="checkbox" >
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <a data-ng-click="" class="btn btn-primary" has-permission=><i
+                                class="fa fa-plus "></i>&nbsp;&nbsp;{{ 'label.button.add' |
+                        translate }}
+                        </a>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</form>
