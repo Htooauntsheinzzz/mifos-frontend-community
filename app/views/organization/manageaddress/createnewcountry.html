@@ -1,4 +1,4 @@
-<form class="content-container" name="editcodeform" novalidate="">
+<form class="content-container" name="createcountryform" novalidate="" ng-controller="CreateOfficeCountryController" ng-submit="submit()">
     <ul class="breadcrumb">
         <li><a href="#/manageofficeaddresses">{{'label.anchor.allofficeAddress' | translate}}</a></li>
         <li><a href="#/officecountry">{{'label.anchor.manageOfficecountry' | translate}}</a></li>
@@ -14,28 +14,26 @@
                 <div class="row">
                     <div class="col-sm-3">
                         <input name="countryName" placeholder="{{ 'label.input.officecountryname' | translate }}"
-                            type="text" class="form-control" />
+                            type="text" class="form-control" ng-model="formData.countryName" />
                     </div>
                     <div class="col-sm-3">
                         <textarea name="description" 
                             placeholder="{{ 'label.input.description' | translate }}" type="text"
-                            class="form-control">
+                            class="form-control" ng-model="formData.description"/>
                     </div>
                     <div class="col-sm-3">
                         <input name="position"  placeholder="{{ 'label.input.position' | translate }}"
-                               type="text" class="form-control"/>
+                               type="text" class="form-control" ng-model="formData.position"/>
                     </div>
                     <div class="col-sm-3">
                         <label class="control-label col-sm-2">{{'label.input.active' | translate}}</label>
-                        <div class="col-sm-3">
-                            <input id="activeCheckbox" type="checkbox" >
+                        <div class="col-sm-3" >
+                            <input id="activeCheckbox" type="checkbox" ng-model="formData.isActive">
                         </div>
                     </div>
                     <div class="col-sm-3">
-                        <a data-ng-click="" class="btn btn-primary" has-permission=><i
-                                class="fa fa-plus "></i>&nbsp;&nbsp;{{ 'label.button.add' |
-                        translate }}
-                        </a>
+                        <button id="save" type="submit" class="btn btn-primary" has-permission='CREATE_OFFICE_COUNTRY'>{{'label.button.save' | translate}}</button>
+                        
                     </div>
                 </div>
 

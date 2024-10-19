@@ -41,6 +41,12 @@
                         getAllOfficesInAlphabeticalOrder: {method: 'GET', params: {orderBy: 'name', sortOrder: 'ASC'}, isArray: true},
                         update: { method: 'PUT'}
                     }),
+
+                    // for Customise officeCountry
+                    createOfficeCountryResource: defineResource(apiVer + "/officeCountry/:countryId", {countryId: "@countryId"}, {
+                        save: {method : 'POST'}
+                    }),
+
                     officeImportTemplateResource: defineResource(apiVer + "/offices/bulkimporttemplate", {}, {
                     		get: {method: 'GET', params: {}}
                     }),
