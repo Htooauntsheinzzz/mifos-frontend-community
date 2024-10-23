@@ -109,6 +109,7 @@ define(['Q', 'underscore', 'mifosX'], function (Q) {
             'organization/ViewOfficeController',
             'organization/CreateOfficeController',
             'organization/CreateOfficeCountryController',
+            'organization/OfficeCountryController',
             'organization/EditOfficeController',
             'organization/CurrencyConfigController',
             'organization/CreateUserController',

@@ -1,4 +1,4 @@
-<div class="content-container">
+<div class="content-container" ng-controller="OfficeCountryController">
     <ul class="breadcrumb">
         <li><a href="#/organization">{{'label.anchor.organization' | translate}}</a></li>
         <li><a href="#/manageofficeaddresses">{{'label.anchor.manageOfficeAddress' | translate }}</a></li>
@@ -24,7 +24,9 @@
                 <br>
                 <!-- When code edit condition insert code -->
                  <div>
-                    <table class="table" ui:sortable>
+                    <input ng-autofocus="true" type="text" ng-model="filterText" ng-keyup="onFilter()"  class="form-control span marginbottom0px" placeholder="{{'label.input.filterbynameexternalid' | translate}}">
+                    <br>
+                    <table class="table">
                         <thead>
                             <tr>
                                 <th>{{ 'label.heading.name' | translate }}</th>
@@ -35,18 +37,12 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <td>
-                        
-                            </td>
-                            <td>
-
-                            </td>
-                            <td>
-
-                            </td>
-                            <td>
-                                
-                            </td>
+                            <tr class="pointer-main" dir-paginate="country in countries | orderBy:'name':reverse  | filter:filterText |  itemsPerPage: limitCountriesPerPage">
+                                <td class="pointer">{{country.name}}</td>
+                                <td class="pointer">{{country.description}}</td>
+                                <td class="pointer">{{country.postion}}</td>
+                                <td class="pointer">{{country.isActive}}</td>
+                            </tr>
                         </tbody>
                     </table>
                  </div>
