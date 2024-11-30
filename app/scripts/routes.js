@@ -303,6 +303,9 @@
             .when('/viewoffice/:id', {
                 templateUrl: 'views/organization/viewoffice.html'
             })
+            .when('/editOfficeCountry/:id',{
+                templateUrl:'/views/organization/manageaddress/editofficecountry.html'
+            })
             .when('/editoffice/:id', {
                 templateUrl: 'views/organization/editoffice.html'
             })

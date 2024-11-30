@@ -7,7 +7,9 @@
                     scope.countries = data;
                 });
                 
-                console.log(scope.countries);
+                scope.routeTo = function (id) {
+                    location.path('/editOfficeCountry/' + id);
+                };
                 
                 if (!scope.searchCriteria.countries) {
                     scope.searchCriteria.countries = null;

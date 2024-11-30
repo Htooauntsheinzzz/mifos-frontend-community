@@ -45,7 +45,10 @@
                     // for Customise officeCountry
                     createOfficeCountryResource: defineResource(apiVer + "/officeCountry/:countryId", {countryId: "@countryId"}, {
                         save: {method : 'POST'},
-                        getAllOfficeCountries :{method : 'GET',params:{},isArray: true }
+                        getAllOfficeCountries :{method : 'GET',params:{},isArray: true },
+                        get: {method: 'GET' , params: {countryId: '@countryId'}},
+                        update: {method: 'PUT', params: {countryId: '@countryId'}}
+
                     }),
 
                     officeImportTemplateResource: defineResource(apiVer + "/offices/bulkimporttemplate", {}, {

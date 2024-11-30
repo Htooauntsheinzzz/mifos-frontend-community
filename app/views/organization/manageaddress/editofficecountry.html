@@ -1,0 +1,50 @@
+<div class="content-container" ng-controller="EditOfficeCountryController">
+    <ul class="breadcrumb">
+        <li><a href="#/manageofficeaddresses">{{'label.anchor.allofficeAddress' | translate}}</a></li>
+        <li><a href="#/officecountry">{{'label.anchor.manageOfficecountry' | translate}}</a></li> 
+        <li class="active">{{'Editing '+ formData.countryName  | translate}}</li>
+    </ul>
+    <div class="card">
+        <div class="content">
+        <form name="editofficecountryform" novalidate="" class="form-horizontal"
+            rc-submit="submit()">
+                <api-validate></api-validate>
+                <fieldset>
+                    <legend>{{'label.heading.officecountryname' | translate}}</legend>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="name">{{'label.input.officecountryname' | translate}}</label>
+                        <div class="col-sm-3">
+                         <input type="text" id="name" name="name" ng-model="formData.name" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" >{{'label.input.description' | translate}}</label>
+
+                        <div class="col-sm-3">
+                           <input name="description" ng-model="formData.description"
+                                      type="text" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" >{{'label.input.position' | translate}}</label>
+
+                        <div class="col-sm-3">
+                            <input type="text" id="position" name="position" ng-model="formData.position" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">{{'label.input.active' | translate}}</label>
+
+                        <div class="col-sm-3">
+                            <input type="checkbox" id="isActive"  ng-model="formData.isActive">
+                        </div>
+                    </div>
+                    <div class="col-md-offset-2 paddedleft">
+                        <a id="cancel" href="#/officecountry " class="btn btn-default">{{'label.button.cancel' | translate}}</a>
+                        <button id="save" type="submit" class="btn btn-primary" has-permission='UPDATE_PAYMENTTYPE'>{{'label.button.save' | translate}}</button> 
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>

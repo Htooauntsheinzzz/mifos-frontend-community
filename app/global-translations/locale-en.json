@@ -4302,6 +4302,10 @@
   "label.defineAddOfficeDistrict": "Add or edit office district place",
   "label.button.createnewCountry": "Create New Country",
   "label.heading.createnewCountry": "Create New Office Country Location",
-  "label.input.officecountryname":"Country Name"
+  "label.input.officecountryname":"Country Name",
+  "label.input.filterbyofficecountryname": "Filter by Name / Position",
+  "label.heading.officecountryname": "Edit Office Country",
+  "label.input.countryDescription": "Description"
+  
   
 }
